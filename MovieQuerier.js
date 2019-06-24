@@ -4,7 +4,7 @@ class MovieQuerier {
         var moviesPromise = new Promise(function (resolve, reject) {
 
             var sanitizedSearchInput = encodeURIComponent(titleSearch);
-            $.get("http://www.omdbapi.com/?apikey=3430a78&s=" + sanitizedSearchInput)
+            $.get("https://www.omdbapi.com/?apikey=3430a78&s=" + sanitizedSearchInput)
                 .then(function (movieData) {
                     resolve(movieData.Search);
                 });
@@ -17,7 +17,7 @@ class MovieQuerier {
         var moviePromise = new Promise(function (resolve, reject) {
 
             var sanitizedId = encodeURIComponent(id);
-            $.get("http://www.omdbapi.com/?apikey=3430a78&i=" + sanitizedId)
+            $.get("https://www.omdbapi.com/?apikey=3430a78&i=" + sanitizedId)
                 .then(function (movieData) {
                     var movie =
                     {
